@@ -1,0 +1,31 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <h1>Edit <%= @shop_item.name %></h1>
+    <a href="<%= url_for :action => :show, :id => @shop_item.object %>" class="ui-btn-left" data-icon="back" data-direction="reverse">
+      Cancel
+    </a>
+    <a href="<%= url_for :action => :delete, :id => @shop_item.object %>" class="ui-btn-right" data-icon="delete" data-direction="reverse">
+      Delete
+    </a>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @shop_item.object %>"/>
+      
+          <div data-role="fieldcontain">
+            <label for="shop_item[name]" class="fieldLabel">Name</label>
+            <input type="text" id="shop_item[name]" name="shop_item[name]" value="<%= @shop_item.name %>" <%= placeholder( "Name" ) %> />
+          </div>
+      
+          <div data-role="fieldcontain">
+            <label for="shop_item[category]" class="fieldLabel">Category</label>
+            <input type="text" id="shop_item[category]" name="shop_item[category]" value="<%= @shop_item.category %>" <%= placeholder( "Category" ) %> />
+          </div>
+      
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

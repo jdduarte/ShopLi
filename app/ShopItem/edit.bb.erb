@@ -1,0 +1,29 @@
+<div data-role="page">
+
+  <div data-role="header" data-position="inline">
+    <%= link_to "Back", :action => :show, :id => @shop_item.object %>
+    <h1>Edit <%= @shop_item.name%></h1>
+    <%= link_to "Delete", :action => :delete, :id => @shop_item.object %>
+  </div>
+
+  <div data-role="content">
+    <form method="POST" action="<%= url_for :action => :update %>">
+      <input type="hidden" name="id" value="<%= @shop_item.object %>"/>
+      <table>
+          
+          <tr>
+              <td class="itemLabel">Name: </td>
+              <td class="itemValue"><input type="text" name="shop_item[name]" value="<%= @shop_item.name %>"/></td>
+          </tr>
+          
+          <tr>
+              <td class="itemLabel">Category: </td>
+              <td class="itemValue"><input type="text" name="shop_item[category]" value="<%= @shop_item.category %>"/></td>
+          </tr>
+          
+      </table>
+      <input type="submit" value="Update"/>
+    </form>
+  </div>
+
+</div>

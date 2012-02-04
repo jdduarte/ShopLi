@@ -1,9 +1,0 @@
-== ShopLi
-
-A shopping list app full of awesomeness
-
-== Development Log
-
-
-Sat Feb  4 01:57:06 WET 2012
-

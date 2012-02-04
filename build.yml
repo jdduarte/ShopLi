@@ -1,0 +1,24 @@
+#sdk: "/Users/Soarez/.rvm/gems/ruby-1.9.3-p0@rho/gems/rhodes-3.3.1"
+sdkversion: 3.3.0
+name: ShopLi
+version: 1.0
+vendor: rhomobile
+build: debug
+bbver: 4.6
+applog: rholog.txt
+iphone:
+  configuration: Release
+  sdk: iphonesimulator5.0
+  provisionprofile:
+  codesignidentity:
+  entitlements:
+  BundleIdentifier: com.rhomobile.shopli
+  BundleURLScheme: shopli
+wp:
+  productid: '53016820-3102-012f-1fdc-3c0754404968'
+symbian:
+  uid: '0xe0d4ed85'
+android:
+  version: 2.1
+
+extensions: ["json", "another-extension"]
